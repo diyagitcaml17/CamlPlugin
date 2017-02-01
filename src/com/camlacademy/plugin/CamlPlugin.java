@@ -12,6 +12,15 @@ public class CamlPlugin extends CamlPluginBase {
 	private String exampleDataManagedByPlugin = "EXAMPLE";
 
 	public static final String CONFIG_KEY_EXAMPLE_DATA = "example-data";
+	
+	public static final String ITEM_NAME_TELEPORTER = "Teleporter";
+	public static final String ITEM_NAME_BOUNCY_SHOES = "Bouncy Shoes";
+	public static final String ITEM_NAME_THOR = "Thor";
+	
+	public static final Material ITEM_TYPE_TELEPORTER = Material.COMPASS;
+	public static final Material ITEM_TYPE_BOUNCY_SHOES = Material.IRON_BOOTS;
+	public static final Material ITEM_TYPE_THOR = Material.BOW;
+	
 
 	@Override
 	public void onEnable() {
