@@ -1,6 +1,6 @@
-name: CowArrows
+name: CamlPlugin
 version: 1.0.0
-main: com.camlacademy.cowarrows.CowArrowsPluginV4
+main: com.camlacademy.plugin.CamlPlugin
 commands:
   toggleMushroomCows:
     description: toggles the ability to spawn mushroom cows by Cow arrows.
