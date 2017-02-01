@@ -37,7 +37,7 @@ public class CamlPlugin extends CamlPluginBase {
 		itemStack.setItemMeta(itemMeta);
 
 		ShapedRecipe recipe = new ShapedRecipe(itemStack);
-		recipe.shape("DDD", "C", "DDD");
+		recipe.shape("DDD", "CCC", "DDD");
 
 		recipe.setIngredient('B', Material.DIRT);
 		recipe.setIngredient('C', Material.COBBLESTONE);
