@@ -17,11 +17,11 @@ import org.bukkit.inventory.meta.ItemMeta;
 import com.camlacademy.spigot.utils.CamlListenerBase;
 import com.camlacademy.spigot.utils.CamlPluginBase;
 
-public class PlayerDamageEntityListener extends CamlListenerBase {
+public class ItemStatsDamageListener extends CamlListenerBase {
 
 	public static String LORE_KEY_KILLING_BLOWS = "Killing blows: ";
 
-	public PlayerDamageEntityListener(CamlPluginBase plugin) {
+	public ItemStatsDamageListener(CamlPluginBase plugin) {
 		super(plugin);
 	}
 

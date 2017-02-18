@@ -5,6 +5,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import com.camlacademy.plugin.itemstats.ItemStatsDamageListener;
+import com.camlacademy.plugin.kits.KitCommand;
 import com.camlacademy.plugin.lottery.LotteryScheduler;
 import com.camlacademy.plugin.luckyblocks.LuckyBlockBreakListener;
 import com.camlacademy.plugin.teleporter.TeleporterListener;
@@ -40,10 +42,12 @@ public class CamlPlugin extends CamlPluginBase {
 		new ExampleListener(this);
 		new TeleporterListener(this);
 		new LuckyBlockBreakListener(this);
+		new ItemStatsDamageListener(this);
 	}
 
 	private void registerCommands() {
 		new ExampleCommand(this, "example");
+		new KitCommand(this, "kit");
 	}
 
 	private void registerRecipes() {
