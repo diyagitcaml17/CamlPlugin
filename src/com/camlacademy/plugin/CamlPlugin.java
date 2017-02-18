@@ -5,6 +5,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import com.camlacademy.plugin.lottery.LotteryScheduler;
+import com.camlacademy.plugin.luckyblocks.LuckyBlockBreakListener;
+import com.camlacademy.plugin.teleporter.TeleporterListener;
 import com.camlacademy.spigot.utils.CamlPluginBase;
 
 public class CamlPlugin extends CamlPluginBase {
@@ -28,10 +31,15 @@ public class CamlPlugin extends CamlPluginBase {
 		registerListeners();
 		registerCommands();
 		registerRecipes();
+		
+		
+		new LotteryScheduler(this).runTaskTimer(this, 20L * 5, 20L * 120);
 	}
 
 	private void registerListeners() {
 		new ExampleListener(this);
+		new TeleporterListener(this);
+		new LuckyBlockBreakListener(this);
 	}
 
 	private void registerCommands() {
@@ -40,6 +48,7 @@ public class CamlPlugin extends CamlPluginBase {
 
 	private void registerRecipes() {
 
+		//example item
 		ItemStack itemStack = new ItemStack(Material.DIRT);
 		ItemMeta itemMeta = itemStack.getItemMeta();
 		itemMeta.setDisplayName("Example Item");
@@ -52,6 +61,9 @@ public class CamlPlugin extends CamlPluginBase {
 		recipe.setIngredient('C', Material.COBBLESTONE);
 
 		getServer().addRecipe(recipe);
+		
+		//teleporter
+		getServer().addRecipe(TeleporterListener.getTeleporterRecipe());
 	}
 
 	public String getExampleDataManagedByPlugin() {

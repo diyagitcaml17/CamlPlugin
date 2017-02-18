@@ -1,1 +1,9 @@
 example-data: Data in Config
+luckyblocks.types:
+  REDSTONE_ORE:
+    rewards:
+      r1:
+        type: DIAMOND_SWORD
+        drop-chance: 33
+        enchants:
+          
