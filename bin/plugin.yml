@@ -4,3 +4,5 @@ main: com.camlacademy.plugin.CamlPlugin
 commands:
   example:
     description: Example command.
+  kit:
+    description: Simple kit. 2 min cool down
