@@ -5,6 +5,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import com.camlacademy.plugin.lottery.LotteryScheduler;
+import com.camlacademy.plugin.teleporter.TeleporterListener;
 import com.camlacademy.spigot.utils.CamlPluginBase;
 
 public class CamlPlugin extends CamlPluginBase {
@@ -28,10 +30,17 @@ public class CamlPlugin extends CamlPluginBase {
 		registerListeners();
 		registerCommands();
 		registerRecipes();
+		
+		int delay = 5;//sec
+		int period = 120;//sec
+		
+		new LotteryScheduler(this).runTaskTimer(this, 20L * delay, 20L * period);
 	}
 
 	private void registerListeners() {
 		new ExampleListener(this);
+		
+		new TeleporterListener(this);
 	}
 
 	private void registerCommands() {
